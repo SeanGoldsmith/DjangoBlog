@@ -1,2 +1,2 @@
-# WebScrape
-A webscraping app built in python
+# Django Blog
+A personal blog built with Django.

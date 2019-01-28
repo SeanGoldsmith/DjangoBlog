@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path(r'^login/$', auth_views.login, {'template_name': 'core/login.html'}, name='login'),
+    path('BlogList/', views.BlogList, name="BlogList"),
+    path('PostCreate/', views.PostCreate, name="BlogList"),
 ]

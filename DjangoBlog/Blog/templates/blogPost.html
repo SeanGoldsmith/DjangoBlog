@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class='col-md-8 col-md-offset-2 post-list'>
+            <div class="background">
+                <p class="center-text">{{blogPost.post_title}}</p> 
+                <p class="center-text">{{blogPost.post_date}}</p> 
+                <p class="center-text">{{blogPost.post_text|safe}}</p> 
+            </div>
+            {% for comment in comments%}
+                <p class="center-text">{{comment.user.username}}</p> 
+                <p class="center-text">{{comment.comment_date}}</p> 
+                <p class="center-text">{{comment.comment_body}}</p> 
+            {% endfor%}
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

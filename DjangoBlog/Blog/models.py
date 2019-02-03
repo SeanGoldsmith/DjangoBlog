@@ -7,8 +7,9 @@ class BlogPost(models.Model):
     post_text = models.TextField()
 
 class Comment(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     blog_post = models.ForeignKey(BlogPost,on_delete=models.CASCADE)
     comment_date = models.DateTimeField()
     comment_body = models.TextField()
+
 

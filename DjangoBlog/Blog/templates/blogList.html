@@ -4,13 +4,15 @@
 <div class="container">
     <div class="row">
         <div class='col-md-8 col-md-offset-2 post-list'>
-            {% for post in blogList %}
-                <div class="background">
-                    <p class="center-text">{{post.post_title}}</p> 
-                    <p class="center-text">{{post.post_date}}</p> 
-                    <p class="center-text">{{post.post_text|safe}}</p> 
-                </div>
-                </br>
+            {% for datum in data %}
+                <a href={{datum.1}} id="anchor">
+                    <div class="background">
+                        <p class="center-text">{{datum.0.post_title}}</p> 
+                        <p class="center-text">{{datum.0.post_date}}</p> 
+                        <p class="center-text">{{datum.0.post_text|safe}}</p> 
+                    </div>
+                </a>
+                    </br>
             {% endfor %}
         </div>
     </div>

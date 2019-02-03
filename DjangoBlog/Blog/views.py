@@ -13,10 +13,14 @@ def index(request):
     return HttpResponse('Hello')
 
 def BlogList(request):
-    blogList = BlogPost.objects.all()
+    blogPosts = BlogPost.objects.all()
     template = loader.get_template('blogList.html')
+    urls = []
+    for post in blogPosts:
+        urls.append("../" + str(post.id) + "/Post")
+    data = zip(blogPosts,urls)
     context = {
-        'blogList': blogList,
+        'data': data,
     }
     return HttpResponse(template.render(context, request))
 

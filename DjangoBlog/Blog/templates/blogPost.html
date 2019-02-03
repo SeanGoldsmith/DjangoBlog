@@ -14,7 +14,7 @@
                 <p class="center-text">{{comment.comment_date}}</p> 
                 <p class="center-text">{{comment.comment_body}}</p> 
             {% endfor%}
-            <form action="" method="post">
+            <form class="comment-form" action="" method="post">
                 {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Submit">

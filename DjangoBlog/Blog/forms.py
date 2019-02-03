@@ -14,4 +14,5 @@ class CommentForm(ModelForm):
             'user': forms.HiddenInput,
             'blog_post': forms.HiddenInput,
             'comment_date': forms.HiddenInput,
+            'comment_body': forms.Textarea(attrs={'class':'text-field'})
         }

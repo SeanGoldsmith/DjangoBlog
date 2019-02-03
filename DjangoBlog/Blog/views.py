@@ -52,6 +52,6 @@ def PostCreate(request):
         else:
             return HttpResponse('FAILED!')
     else:
-        form = PostForm()
+        form = PostForm(initial={'post_date':datetime.now()})
         return render(request, 'postForm.html', {'form':form})
 

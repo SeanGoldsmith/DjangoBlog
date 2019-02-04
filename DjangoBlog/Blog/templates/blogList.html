@@ -7,7 +7,7 @@
             {% for datum in data %}
                 <a href={{datum.1}} id="anchor">
                     <div class="background">
-                        <p class="center-text">{{datum.0.post_title}}</p> 
+                        <h1 class="center-text">{{datum.0.post_title|safe}}</h1> 
                         <p class="center-text">{{datum.0.post_date}}</p> 
                         <p class="center-text">{{datum.0.post_text|safe}}</p> 
                     </div>

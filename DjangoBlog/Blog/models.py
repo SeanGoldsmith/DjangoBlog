@@ -6,10 +6,16 @@ class BlogPost(models.Model):
     post_date = models.DateField()
     post_text = models.TextField()
 
+    class Meta:
+        get_latest_by = 'post_date'
+
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     blog_post = models.ForeignKey(BlogPost,on_delete=models.CASCADE)
     comment_date = models.DateTimeField()
     comment_body = models.TextField()
+
+    class Meta:
+        get_latest_by = 'comment_date'
 
 

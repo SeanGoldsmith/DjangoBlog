@@ -1,21 +1,25 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <div class="container">
     <div class="row mt-30">
-        <div class='col-md-8 post-list'>
+        <div class='col-md-9 post-list'>
             {% for datum in data %}
                 <a href={{datum.1}} id="anchor">
-                    <div class="background">
-                        <h1 class="center-text">{{datum.0.post_title|safe}}</h1> 
-                        <p class="center-text">{{datum.0.post_date}}</p> 
-                        <p class="center-text">{{datum.0.post_text|safe}}</p> 
+                    <div class="single-post">
+                        <img class="post-img inline" src={% static "./Blog/img/sean.jpg" %}>
+                            <div class="inline post-text">
+                                <h3 class="center-text">{{datum.0.post_title|safe}}</h1> 
+                                <p class="center-text">{{datum.0.post_date}}</p> 
+                            </div>
                     </div>
                 </a>
                     </br>
             {% endfor %}
         </div>
-        <div class='col-md-4 sidebar'>
+        <div class='col-md-3 sidebar'>
+            <img class="profile-img" src={% static "./Blog/img/sean.jpg" %}/>
+            <h5 class="center-text">Hi! I'm Sean Goldsmith, a Portland based Software Developer, and this is my Dev-Blog!</h5>
         </div>
     </div>
 </div>

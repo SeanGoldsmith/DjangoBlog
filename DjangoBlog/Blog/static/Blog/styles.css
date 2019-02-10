@@ -1,8 +1,12 @@
 
+/*---------Generic---------*/
+
 #content {
     background-color: #FFEFF1;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+
+/*-------Home Page---------*/
 .post-list {
     color: #744253;
 }

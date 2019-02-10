@@ -7,11 +7,13 @@
             {% for datum in data %}
                 <a href={{datum.1}} id="anchor">
                     <div class="single-post">
-                        <img class="post-img inline" src={% static "./Blog/img/sean.jpg" %}>
-                            <div class="inline post-text">
-                                <h3 class="center-text">{{datum.0.post_title|safe}}</h1> 
-                                <p class="center-text">{{datum.0.post_date}}</p> 
-                            </div>
+                        <div class="img-container">
+                            <img class="post-img inline" src={{datum.0.post_img.url}}>
+                        </div>
+                        <div class="inline post-text">
+                            <h3 class="center-text">{{datum.0.post_title|safe}}</h1> 
+                            <p class="center-text">{{datum.0.post_date}}</p> 
+                        </div>
                     </div>
                 </a>
                     </br>

@@ -23,21 +23,28 @@
 
 .single-post {
     background-color: rgb(252, 224, 224);
-    height: 150px;
+    height: 250px;
     width: 100%;
 }
 
 .post-text {
-    padding-left: 25px;
+    display: inline-block;
+    width: 66%;
+    vertical-align: top;
+    padding-top: 25px;
 }
 
-.inline {
+.img-container {
+    max-width: 33%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
     display: inline-block;
+    border: 2px solid rgb(131, 131, 131);
 }
 
 .post-img {
     height: 100%;
-    width: auto;
 }
 
 .text-field {

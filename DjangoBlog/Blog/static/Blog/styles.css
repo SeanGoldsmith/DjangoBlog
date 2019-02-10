@@ -1,13 +1,23 @@
+
+#content {
+    background-color: #FFEFF1;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
 .post-list {
-    color: rgb(62, 132, 172);
+    color: #744253;
 }
 
 .center-text {
     text-align: center;
+    margin: 0 0;
+}
+
+.light-grey {
+    background-color: rgb(223, 223, 223);
 }
 
 .background {
-    background-color: cornsilk;
+    background-color: #FFEFF1;
 }
 
 .text-field {
@@ -16,9 +26,12 @@
     height: 100px;
 } 
 
-#anchor:hover {
+#anchor:hover, #anchor:active, #anchor:visited, #anchor:link{
     text-decoration: none;
     color: unset;
+}
+.mt-30 {
+    margin-top: 30px;
 }
 
 .navbar {
@@ -26,4 +39,10 @@
     width: 100vw;
     height: 50px;
     background-color: black;
+}
+
+.sidebar {
+    background-color: rgb(245, 245, 245);
+    height: 100vh;
+    border: .5px solid rgb(192, 192, 192);
 }

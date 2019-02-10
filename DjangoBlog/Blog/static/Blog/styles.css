@@ -22,9 +22,10 @@
 }
 
 .single-post {
-    background-color: rgb(252, 224, 224);
-    height: 250px;
+    background-color: rgb(250, 232, 232);
+    height: 225px;
     width: 100%;
+    border: .5px solid grey;
 }
 
 .post-text {
@@ -40,7 +41,7 @@
     overflow: hidden;
     margin: 0;
     display: inline-block;
-    border: 2px solid rgb(131, 131, 131);
+    border-right: 2px solid rgb(131, 131, 131);
 }
 
 .post-img {

@@ -29,7 +29,7 @@ def Post(request, post_id):
         form = CommentForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect()
+            return HttpResponseRedirect(request.path_info)
         else:
             return HttpResponse('Failed')
     else:

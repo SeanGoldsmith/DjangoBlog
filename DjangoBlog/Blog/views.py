@@ -45,10 +45,10 @@ def Post(request, post_id):
         return HttpResponse(template.render(context, request))
 
 
-@user_passes_test(admin_check)
+#@user_passes_test(admin_check)
 def PostCreate(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             print("Success")
             form.save()

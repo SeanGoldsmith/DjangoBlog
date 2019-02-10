@@ -5,6 +5,7 @@ class BlogPost(models.Model):
     post_title = models.CharField(max_length=50)
     post_date = models.DateField(auto_now_add=True)
     post_text = models.TextField()
+    post_img = models.ImageField(upload_to='img/', height_field=None, width_field=None, max_length=None, blank=True, null=True)
 
     class Meta:
         get_latest_by = 'post_date'

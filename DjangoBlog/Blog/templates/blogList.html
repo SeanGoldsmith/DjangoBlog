@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
     <div class="row mt-30">
-        <div class='col-md-9 post-list'>
+        <div class='col-md-9'>
             {% for datum in data %}
                 <a href={{datum.1}} id="anchor">
                     <div class="single-post">
@@ -21,7 +21,7 @@
         </div>
         <div class='col-md-3 sidebar'>
             <img class="profile-img" src={% static "./Blog/img/sean.jpg" %}/>
-            <h4 class="center-text">Hi! I'm Sean Goldsmith, a Portland based Software Developer, and this is my Dev-Blog!</h4>
+            <h4 class="center-text">Hi! I'm Sean Goldsmith, a Portland based software developer, and this is my Dev-Blog!</h4>
             <h5 class="center-text">This blog is of my own design, and it is built with Django! I am going to attempt to update this blog weekly. The idea is to keep
             track of my progress as a developer.  I want to discuss what projects I'm working on, what I've 
             learned recently, and perhaps a touch of what else is keeping me busy. Thanks for stopping by! </h4>

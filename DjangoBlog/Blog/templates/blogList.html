@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-    <div class="row mt-30">
+<div class="container container-margin">
+    <div class="row">
         <div class='col-md-9'>
             {% for datum in data %}
                 <a href={{datum.1}} id="anchor">
@@ -19,7 +19,7 @@
                     </br>
             {% endfor %}
         </div>
-        <div class='col-md-3 sidebar'>
+        <div class='col-md-3 col-sm-12 sidebar'>
             <img class="profile-img" src={% static "./Blog/img/sean.jpg" %}/>
             <h4 class="center-text">Hi! I'm Sean Goldsmith, a Portland based software developer, and this is my Dev-Blog!</h4>
             <h5 class="center-text">This blog is of my own design, and it is built with Django! I am going to attempt to update this blog weekly. The idea is to keep

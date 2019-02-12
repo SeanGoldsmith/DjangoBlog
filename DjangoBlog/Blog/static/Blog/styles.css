@@ -15,6 +15,10 @@
     border: 1px solid #477E70;
 }
 
+.container-margin {
+    margin-top: 75px;
+}
+
 .center-text {
     text-align: center;
     margin: 0 0;
@@ -97,6 +101,6 @@
 
 .sidebar {
     background-color: #FBE7DF;
-    height: 100vh;
     border: .5px solid rgb(192, 192, 192);
+    padding-bottom:25px;
 }

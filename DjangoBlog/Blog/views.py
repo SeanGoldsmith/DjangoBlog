@@ -13,7 +13,7 @@ def index(request):
     return HttpResponse('Hello')
 
 def BlogList(request):
-    blogPosts = BlogPost.objects.all()
+    blogPosts = BlogPost.objects.all().order_by('-post_date')
     template = loader.get_template('blogList.html')
     urls = []
     for post in blogPosts:

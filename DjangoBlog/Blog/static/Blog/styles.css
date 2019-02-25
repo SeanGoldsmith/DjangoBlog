@@ -1,106 +1,43 @@
 
-/*---------Generic---------*/
 
-#content {
-    background-color: #232626;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    text-shadow: 1px 2px 5px #FBE7DF;
-    color: #232626;
-    overflow-x: hidden;
-
-}
-
-/*-------Home Page---------*/
-.post-list {
-    border: 1px solid #477E70;
-}
-
-.container-margin {
-    margin-top: 75px;
-}
-
-.center-text {
-    text-align: center;
-    margin: 0 0;
-}
-
-.post-text {
-    font-size: 1.5em;
-    width: 100%;
-    position: relative;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
-.light-grey {
-    background-color: rgb(223, 223, 223);
-}
-
-.single-post {
-    background-color: #A7BF90;
-    height: 225px;
-    width: 100%;
-    border: .5px solid #477E70;
-}
-
-.post-text {
-    display: inline-block;
-    width: 66%;
-    vertical-align: top;
-    padding-top: 25px;
-}
-
-.row-color {
-    background-color: #A7BF90;
-}
-
-.img-container {
-    max-width: 33%;
-    height: 100%;
-    overflow: hidden;
+#wrapper {
+    box-sizing: border-box;
     margin: 0;
-    display: inline-block;
-    border-right: 2px solid #477E70;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2em;
+    justify-items: center;
+    background-color: #0E0E0F;
+    color: #a0a0a0;
 }
 
-.single-img {
-    margin: auto;
-}
-
-.post-img {
-    height: 100%;
-}
-
-.text-field {
-    background-color: #FBE7DF;
-    width: 100%;
-    height: 100px;
-} 
-
-.profile-img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    padding-top: 10px;
-}
-
-#anchor:hover, #anchor:active, #anchor:visited, #anchor:link{
-    text-decoration: none;
-    color: unset;
-}
-.mt-30 {
-    margin-top: 30px;
-}
 
 .navbar {
-    display: block;
-    width: 100vw;
     height: 50px;
-    background-color: black;
+    width: 100%;
+    background-color: #7D7D80;
 }
 
-.sidebar {
-    background-color: #FBE7DF;
-    border: .5px solid rgb(192, 192, 192);
-    padding-bottom:25px;
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
 }
+
+.post-container {
+    text-align: center;
+    border-bottom: 1px solid #5C5C5D;
+    padding: 1em;
+}
+
+.post-list-img {
+    width: 95%;
+    padding: 0 2.5%;
+}
+
+@media screen and (min-width: 760px) {
+    #wrapper {
+        background-color: blue;
+    }
+  }

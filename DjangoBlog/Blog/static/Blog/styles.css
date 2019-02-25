@@ -6,19 +6,47 @@
     padding: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-gap: 2em;
     justify-items: center;
-    background-color: #0E0E0F;
+    background-color: #000011;
     color: #a0a0a0;
 }
 
 
 .navbar {
+    display: flex;
+    justify-content: start;
     height: 50px;
     width: 100%;
-    background-color: #7D7D80;
+    background-color: #000011;
 }
 
+
+.navbar ul {
+    padding-left: 10px;
+}
+
+.navbar li {
+    display: inline-block;
+    color: #a0a0a0;
+
+}
+
+.banner {
+    min-height: 200px;
+    background-image: url("./img/mountain.jpeg");
+    background-size: cover;
+    color: #000011;
+    text-shadow: 1px 1px 1px white;
+    margin-bottom: 50px;
+
+}
+
+.banner p {
+    font-size: 1.75em;
+    text-align: center;
+    line-height: 200px;
+    margin: 0;
+}
 
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;

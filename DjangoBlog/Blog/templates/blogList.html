@@ -2,7 +2,10 @@
 {% load static %}
 {% block content %}
 
-<div class=''>
+<div>
+    <div class="banner">
+        <p>Sean Goldsmith's DevBlog</p>
+    </div>
     {% for datum in data %}
         <a href={{datum.1}} id="anchor">
             <div>

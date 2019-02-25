@@ -1,32 +1,32 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container container-margin">
-    <div class="row">
-        <div class='col-md-9'>
-            {% for datum in data %}
-                <a href={{datum.1}} id="anchor">
-                    <div class="single-post">
-                        <div class="img-container">
-                            <img class="post-img inline" src={{datum.0.post_img.url}}>
-                        </div>
-                        <div class="inline post-text">
-                            <h3 class="center-text">{{datum.0.post_title|safe}}</h1> 
-                            <p class="center-text">{{datum.0.post_date}}</p> 
-                        </div>
-                    </div>
-                </a>
-                    </br>
-            {% endfor %}
-        </div>
-        <div class='col-md-3 col-sm-12 sidebar'>
-            <img class="profile-img" src={% static "./Blog/img/sean.jpg" %}/>
-            <h4 class="center-text">Hi! I'm Sean Goldsmith, a Portland based software developer, and this is my Dev-Blog!</h4>
-            <h5 class="center-text">This blog is of my own design, and it is built with Django! I am going to attempt to update this blog weekly. The idea is to keep
-            track of my progress as a developer.  I want to discuss what projects I'm working on, what I've 
-            learned recently, and perhaps a touch of what else is keeping me busy. Thanks for stopping by! </h4>
-        </div>
+
+<div>
+    <div class="banner">
+        <p>Sean Goldsmith's DevBlog</p>
     </div>
+    {% for datum in data %}
+        <a href={{datum.1}} id="anchor">
+            <div>
+                <div class="post-container">
+                    <img class="post-list-img" src={{datum.0.post_img.url}}>
+                    <h3>{{datum.0.post_title|safe}}</h1> 
+                    <p>{{datum.0.post_date}}</p> 
+                </div>
+                    
+            </div>
+        </a>
+            </br>
+    {% endfor %}
 </div>
+<div class=''>
+    <img src={% static "./Blog/img/sean.jpg" %}/>
+    <h4>Hi! I'm Sean Goldsmith, a Portland based software developer, and this is my Dev-Blog!</h4>
+    <h5>This blog is of my own design, and it is built with Django! I am going to attempt to update this blog weekly. The idea is to keep
+    track of my progress as a developer.  I want to discuss what projects I'm working on, what I've 
+    learned recently, and perhaps a touch of what else is keeping me busy. Thanks for stopping by! </h4>
+</div>
+
 
 {% endblock %}

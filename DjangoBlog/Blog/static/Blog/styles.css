@@ -1,6 +1,11 @@
 
+/* BlogList */
 
 #wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -33,10 +38,10 @@
 
 .banner {
     min-height: 200px;
+    width: 100%;
     background-image: url("./img/mountain.jpeg");
     background-size: cover;
     color: #000011;
-    text-shadow: 1px 1px 1px white;
     margin-bottom: 50px;
 
 }
@@ -62,6 +67,87 @@ a:link, a:hover, a:visited, a:active {
 .post-list-img {
     width: 95%;
     padding: 0 2.5%;
+}
+
+.side-bar-img {
+    display: block;
+    border-radius: 50%;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.side-bar h4, .side-bar h5 {
+    text-align: center;
+    padding: 0 25px;
+}
+
+/* End of BlogList */
+
+.post-title {
+    width: 80%;
+    text-align: center;
+    color: #a0a0a0;
+    margin: auto;
+}
+
+.img-container {
+    width: 100vw;
+}
+
+.post-img {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.post-content {
+    width: 80%;
+    margin: 0 10%;
+    font-size: 1.25em;
+}
+
+.post-date {
+
+}
+
+.post-text {
+    width: 100%;
+}
+
+.comment-header {
+    text-align: center;
+    font-style: bold;
+}
+
+.comment-container {
+    text-align: center;
+    padding: 0 25px;
+}
+
+.single-comment {
+    padding: 10px 0;
+}
+
+.single-comment p {
+    margin: 2px 0;
+}
+
+#id_comment_body {
+    display: block;
+    margin: auto;
+}
+
+.comment-button {
+    display: block;
+    margin: 10px auto;
+    width: 30%;
+    height: 30px;
+}
+
+label {
+    visibility: hidden;
 }
 
 @media screen and (min-width: 760px) {

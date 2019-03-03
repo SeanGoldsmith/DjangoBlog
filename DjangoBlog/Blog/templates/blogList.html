@@ -2,23 +2,24 @@
 {% load static %}
 {% block content %}
 
-<div>
-    <div class="banner">
-        <p>Sean Goldsmith's DevBlog</p>
-    </div>
-    {% for datum in data %}
-        <a href={{datum.1}} id="anchor">
-            <div>
-                <div class="post-container">
+<div class="banner">
+    <p>Sean Goldsmith's DevBlog</p>
+</div>
+<div class="all-posts">
+{% for datum in data %}
+    <a href={{datum.1}} id="anchor" class="anchor">
+            <div class="post-container">
+                <div class="post-img-container">
                     <img class="post-list-img" src={{datum.0.post_img.url}}>
+                </div>
+                <div class="post-text-container">
                     <h3>{{datum.0.post_title|safe}}</h1> 
                     <p>{{datum.0.post_date}}</p> 
                 </div>
-                    
             </div>
-        </a>
-            </br>
-    {% endfor %}
+    </a>
+        </br>
+{% endfor %}
 </div>
 <div class='side-bar'>
     <img src={% static "./Blog/img/sean.jpg" %} class="side-bar-img"/>

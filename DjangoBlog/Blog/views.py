@@ -52,7 +52,7 @@ def PostCreate(request):
         if form.is_valid():
             print("Success")
             form.save()
-            return HttpResponseRedirect('http://localhost:8000/Blog/BlogList')
+            return HttpResponseRedirect('/')
         else:
             return HttpResponse('FAILED!')
     else:
